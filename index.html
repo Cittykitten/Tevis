@@ -535,6 +535,65 @@
 
 
 
-
+<script>
+    // Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+        
+        // Toggle hamburger to X
+        if (hamburger.classList.contains('active')) {
+            hamburger.querySelector('span:nth-child(1)').style.transform = 'rotate(45deg) translate(5px, 5px)';
+            hamburger.querySelector('span:nth-child(2)').style.opacity = '0';
+            hamburger.querySelector('span:nth-child(3)').style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        } else {
+            hamburger.querySelector('span:nth-child(1)').style.transform = 'rotate(0) translate(0)';
+            hamburger.querySelector('span:nth-child(2)').style.opacity = '1';
+            hamburger.querySelector('span:nth-child(3)').style.transform = 'rotate(0) translate(0)';
+        }
+    });
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            hamburger.classList.remove('active');
+            hamburger.querySelector('span:nth-child(1)').style.transform = 'rotate(0) translate(0)';
+            hamburger.querySelector('span:nth-child(2)').style.opacity = '1';
+            hamburger.querySelector('span:nth-child(3)').style.transform = 'rotate(0) translate(0)';
+        });
+    });
+    
+    // Scroll animations
+    document.addEventListener('DOMContentLoaded', () => {
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.inner-content, .page3-text, .page4-text, .rating-content');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state
+        const elements = document.querySelectorAll('.inner-content, .page3-text, .page4-text, .rating-content');
+        elements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run once on load
+    });
+</script>
 </body>
 </html>
