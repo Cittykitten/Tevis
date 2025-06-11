@@ -747,3 +747,8 @@ nav ul li a:hover {
     text-align: center;
     align-items: center;
 }
+
+.eb img{
+    display: flex;
+    align-items: center;
+}
