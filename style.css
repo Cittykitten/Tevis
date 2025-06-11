@@ -742,3 +742,8 @@ nav ul li a:hover {
         margin-left: 0;
     }
 }
+
+.upper{
+    text-align: center;
+    align-items: center;
+}
