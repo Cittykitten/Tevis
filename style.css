@@ -1,4 +1,3 @@
-/* Base styles */
 :root {
     --white: #FFFFFF;
     --orange: #ff7300;
@@ -37,6 +36,8 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .logo-image {
@@ -118,10 +119,15 @@ nav ul li a:hover {
     line-height: 1.2;
 }
 
+.orange-word {
+    color: var(--orange);
+}
+
 .main-p {
     font-size: 1.1rem;
     margin-bottom: 30px;
     line-height: 1.6;
+    color: #555;
 }
 
 .main-button, .main-button1 {
@@ -178,6 +184,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
     margin-bottom: 40px;
     line-height: 1.6;
+    color: #555;
 }
 
 .inner-container {
@@ -216,6 +223,11 @@ nav ul li a:hover {
     color: var(--white);
 }
 
+.one { background-color: #ff7300; }
+.two { background-color: #4caf50; }
+.three { background-color: #2196f3; }
+.four { background-color: #9c27b0; }
+
 .txt-h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
@@ -224,6 +236,7 @@ nav ul li a:hover {
 .txt p {
     font-size: 0.95rem;
     line-height: 1.5;
+    color: #555;
 }
 
 /* Solutions Section */
@@ -255,6 +268,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
     margin-bottom: 30px;
     line-height: 1.6;
+    color: #555;
 }
 
 .number-text {
@@ -286,6 +300,7 @@ nav ul li a:hover {
 .numbered-text p {
     font-size: 0.95rem;
     line-height: 1.5;
+    color: #555;
 }
 
 .page3-buttons {
@@ -348,6 +363,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 25px;
+    color: #555;
 }
 
 .p4-text-btn {
@@ -386,6 +402,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
     margin-bottom: 40px;
     line-height: 1.6;
+    color: #555;
 }
 
 .ratcont {
@@ -427,6 +444,10 @@ nav ul li a:hover {
     margin-right: 15px;
 }
 
+.rf1 { background-image: url('Images/profile1.jpg'); }
+.rf2 { background-image: url('Images/profile2.jpg'); }
+.rf3 { background-image: url('Images/profile3.jpg'); }
+
 .profile-name h3 {
     font-size: 1rem;
     margin-bottom: 3px;
@@ -444,6 +465,7 @@ nav ul li a:hover {
     line-height: 1.5;
     text-align: left;
     margin-bottom: 15px;
+    color: #555;
 }
 
 .star-icons {
@@ -530,18 +552,14 @@ nav ul li a:hover {
     color: var(--orange);
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons img {
+.tw {
     height: 30px;
     width: 30px;
+    margin-right: 10px;
     transition: transform 0.3s;
 }
 
-.social-icons img:hover {
+.tw:hover {
     transform: translateY(-3px);
 }
 
@@ -566,10 +584,10 @@ nav ul li a:hover {
 /* Mobile Menu */
 .nav-active {
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
     background-color: var(--white);
     display: flex !important;
     flex-direction: column;
@@ -612,6 +630,7 @@ nav ul li a:hover {
     .page1 {
         flex-direction: row;
         text-align: left;
+        gap: 40px;
     }
     
     .main-text {
@@ -640,6 +659,7 @@ nav ul li a:hover {
     .horizontal-box {
         flex-direction: row;
         justify-content: space-between;
+        padding: 30px 50px;
     }
 }
 
