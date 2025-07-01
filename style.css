@@ -146,6 +146,10 @@ nav ul li a:hover {
     border: 2px solid var(--orange);
 }
 
+.main-button a{
+    color: var(--white);
+}
+
 .main-button:hover {
     background-color: #e56800;
     transform: translateY(-3px);
@@ -156,6 +160,10 @@ nav ul li a:hover {
     background-color: transparent;
     color: var(--black);
     border: 2px solid var(--orange);
+}
+
+.main-button1 a{
+    color: var(--orange);
 }
 
 .main-button1:hover {
